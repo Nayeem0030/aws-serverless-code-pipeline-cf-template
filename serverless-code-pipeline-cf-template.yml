@@ -183,13 +183,13 @@ Resources:
                 commands:
                   - bash deploy.sh
       Environment:
-        Type: "UBUNTU"
-        Runtime(s): standard: 
+        Type: "LINUX_CONTAINER"
+        ComputeType: BUILD_GENERAL1_SMALL
         EnvironmentVariables:
           - Name: env
             Type: PLAINTEXT
             Value: !Ref Environment
-        Image: latest
+        Image: aws/codebuild/nodejs:10.1.0
       Artifacts:
         Type: CODEPIPELINE
 
