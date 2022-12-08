@@ -24,22 +24,22 @@ Parameters:
     - prod
     Description: 'Environment'
     Type: 'String'
-    Default: 'stg'
+    Default: 'dev'
 
   CodePipelineBucketPrefix:
     Description: CodePipeline needs a utility bucket for its internal use. Specify a unique prefix for the bucket name
     Type: String
-    Default: codepipeline-work-
+    Default: codepipeline-s3bucket
 
   GitHubRepository:
     Type: String
-    Default: getcft/aws-serverless-code-pipeline-cfn-template/master
+    Default: Nayeem0030/cloudformation-starter-kit/main
     Description:  owner/repository/branch
 
-  GitHubOAuthToken:
-    Type: String
-    Default:  GitHub OAuthToken Here
-    Description:  CodePipeline requires an OAuthToken
+ # GitHubOAuthToken:
+  #  Type: String
+   # Default:  GitHub OAuthToken Here
+    #Description:  CodePipeline requires an OAuthToken
 
 Resources:
 
