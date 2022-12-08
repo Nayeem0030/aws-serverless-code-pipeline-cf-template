@@ -161,9 +161,9 @@ Resources:
         Type: CODEPIPELINE
         BuildSpec: !Join [ "", ["buildspec", "-", !Ref 'Environment', ".yml"]]
       Environment:
-        Type: "UBUNTU"
-        Runtime(s): standard
-        Image: latest
+        Type: "LINUX_CONTAINER"
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/nodejs:10.1.0
       Artifacts:
         Type: CODEPIPELINE
 
