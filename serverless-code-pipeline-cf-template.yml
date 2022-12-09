@@ -28,6 +28,10 @@ Parameters:
     Type: String
     Default:  GitHub OAuthToken Here
     Description:  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
+    
+  GitHubToken:
+    Type: String
+    Description: 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 
 
 Resources:
 
